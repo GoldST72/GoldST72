@@ -1,6 +1,5 @@
 <?php
-    require ('../../core/ambiente.php');
-    require ('../../core/classMenu.php');
+    require '../ambiente/ambiente.php';
     print Ambiente::ENCABEZADO();
     print Ambiente::ABRIR_BODY();
     print Ambiente::NAV_BAR();

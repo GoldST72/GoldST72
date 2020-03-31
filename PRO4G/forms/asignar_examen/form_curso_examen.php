@@ -1,8 +1,5 @@
 <?php
-require('../template/ambiente.php');
-require('../core/FORM.php');
-require('../core/BDD.php');
-require ('../core/classCursoExamen.php.');
+require '../ambiente/ambiente.php';
 if(isset($_POST['boton_submit']))  classCursoExamen::INSERTAR_CURSO_EXAMEN();
 
 

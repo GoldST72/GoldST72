@@ -1,8 +1,5 @@
 <?php
-require('../template/ambiente.php');
-require('../core/FORM.php');
-require('../core/BDD.php');
-require ('../core/classOpciones.php.');
+require '../ambiente/ambiente.php';
 if(isset($_POST['boton_submit']))  classOpciones::INSERTAR_OPCIONES();
 
 //Y ESTAS LAS ABREN (OBLIGATORIAS)

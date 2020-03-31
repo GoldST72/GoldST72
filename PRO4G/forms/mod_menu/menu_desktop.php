@@ -1,6 +1,5 @@
 <?php
-require ('../static/Ambiente.php');
-require('../mod_menu/menu_desktop.php');
+require '../ambiente/ambiente.php';
 
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY();

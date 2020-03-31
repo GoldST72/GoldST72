@@ -1,9 +1,6 @@
 <?php
 
-require ('../../core/ambiente.php');
-require ('../../core/FORM.php');
-require ('../../core/BDD.php');
-require ('../../core/classAlumno.php');
+require '../ambiente/ambiente.php';
 
 if(isset($_POST['boton_submit']))  classAlumno::INSERTAR_ALUMNO();
 //Y ESTAS LAS ABREN (OBLIGATORIAS)

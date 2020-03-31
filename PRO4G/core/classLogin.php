@@ -1,6 +1,6 @@
 <?php
 
-require('../system/BDD.php');
+
 class Login
 {
     static public function VALIDAR_USUARIO()

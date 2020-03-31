@@ -15,7 +15,7 @@ class Ambiente
     static public function SCRIPTS_VALIDATOS()
     {
         $html = "";
-        $html .= "<script src='../forms/static/validators.js'></script>";
+        $html .= "<script src='../static/validators.js'></script>";
         return $html;
     }
     static public function ABRIR_HEAD()
@@ -39,7 +39,9 @@ class Ambiente
     static public function OBTENER_LOS_SCRIPTS()
     {
         $html = "";
-        $html .= "";
+        $html .= "
+        
+        ";
         return $html;
     }
     static public function OBTENER_ETIQUETAS_HEAD()
@@ -50,9 +52,9 @@ class Ambiente
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />
         <meta name=\"description\" content=\"\" />
-        <meta name=\"author\" content=\"NELIO CIGUENCIA\" />
+        <meta name=\"author\" content=\"NELIO CIGUENCIA HUEVO GRANDE\" />
         <title>SB Admin Gimnasa</title>
-        <link href=\"../startbootstrap-sb-admin-gh-pages/dist/css/styles.css\" rel=\"stylesheet\" />
+        <link href=\"../../startbootstrap-sb-admin-gh-pages/dist/css/styles.css\" rel=\"stylesheet\" />
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js\" crossorigin=\"anonymous\"></script>        
         <link href=\"https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css\" rel=\"stylesheet\" crossorigin=\"anonymous\" />                
                 ";

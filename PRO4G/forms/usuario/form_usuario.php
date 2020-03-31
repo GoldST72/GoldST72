@@ -1,8 +1,5 @@
 <?php
-require('../template/ambiente.php');
-require('../core/FORM.php');
-require('../core/BDD.php');
-require ('../core/classUsuario.php.');
+require '../ambiente/ambiente.php';
 if(isset($_POST['boton_submit']))  classUsuario::INSERTAR_USUARIO();
 
 

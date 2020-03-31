@@ -1,8 +1,5 @@
 <?php
-require('../template/ambiente.php');
-require('../core/FORM.php');
-require('../core/BDD.php');
-require ('../core/classPermisosMenu.php.');
+require '../ambiente/ambiente.php';
 if(isset($_POST['boton_submit']))  classPermisosMenu::INSERTAR_PERMISOS_MENU();
 
 //Y ESTAS LAS ABREN (OBLIGATORIAS)

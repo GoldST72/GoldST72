@@ -1,14 +1,13 @@
 <?php
 
-require '../../static/Ambiente.php';
+require '../ambiente/ambiente.php';
 
 $id = $_GET['id'];
 
 $datos = BDD::CONSULTAR("q_alumno", "id_alumno,estado,persona_id,curso_id", "id_alumno=$id and estado = 'ACTIVO'");
 print Ambiente::ENCABEZADO();
 if ($datos) {
-    if (isset($_POST['boton_submit'])) classAlumno::UPDATE_();
-
+    if (isset($_POST['boton_submit'])) true;
 
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
     print Ambiente::ENCABEZADO();
