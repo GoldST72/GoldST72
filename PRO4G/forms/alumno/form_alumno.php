@@ -6,7 +6,7 @@ if(isset($_POST['boton_submit']))  classAlumno::INSERTAR_ALUMNO();
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
 
 print Ambiente::ENCABEZADO();
-print Ambiente::ABRIR_BODY('bg-primary');
+print Ambiente::ABRIR_BODY('bg-danger');
 print FORM::FORMULARIO_USUARIO("POST","Asignar Curso","return validar_usuario();");
 //ASI SE GENERAN INPUTS
 
