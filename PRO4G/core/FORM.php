@@ -1,9 +1,8 @@
-
 <?php
 
 
-class FORM
-{
+class FORM {
+
     static public function FORMULARIO_USUARIO($method="POST",$titulo = "",$onsubmit = "",$action = "")
     {
         $html = "";
@@ -16,15 +15,27 @@ class FORM
                         <div class=\"container\">
                             <div class=\"row justify-content-center\">
                                 <div class=\"col-lg-7\">
-                                    <div class=\"card shadow-lg border-0 rounded-lg mt-5\">
-                                        <div class=\"card-header\"><h3 class=\"text-center font-weight-light my-4\">$titulo</h3></div>
-                                        <div class=\"card-body\">
-                                            <form method=\"$method\" $onsubmit $action>   
+                                    <div class=\"card shadow-lg border-0 rounded-lg mt-5\">                                       
+        ";
+        $html .= self::CREAR_FORMULARIO_CARD($method,$titulo,$onsubmit,$action);
+        return $html;
+    }
+    static public function CREAR_FORMULARIO_CARD($method,$titulo,$onsubmit,$action,$noForm = "")
+    {
+        $html = "";
+        if(!$noForm) $form = "<form method=\"$method\" $onsubmit $action> ";
+        $html .= "
+                 <div class=\"card-header\">
+                    <h3 class=\"text-center font-weight-light my-4\">$titulo</h3>
+                 </div>
+                 <div class=\"card-body\">
+                   $form
         ";
         return $html;
     }
-    static public function CERRAR_FORMULARIO()
+    static public function CERRAR_FORMULARIO($form = false)
     {
+        if (!$form) $formulario = "</form>";
         return $html = "  </form>
                                     </div>
                                 </div>
@@ -34,32 +45,54 @@ class FORM
                 </main><br>
             </div>";
     }
-    static public function GENERAR_INPUT_USUARIO($nombre,$valor= "",$placeholder,$tipo,$style= "form-control py-4")
+
+    static public function GENERAR_INPUT_USUARIO($nombre,$valor= "",$placeholder,$tipo,$label="",$read_online="",$condicion ="",$id="",$style= "form-control py-4")
     {
         $html = "";
+        if($read_online) $read_online = "readonly=\"readonly\"";
         $html .= "
           <div class=\"form-row\">
             <div class=\"col-md-10\">
               <div class=\"form-group\">
-                 <label class=\"small mb-1\" for=\"$nombre\">$nombre</label>
-                 <input class=\"$style\"name=\"$nombre\" id=\"$nombre\" type=\"$tipo\" placeholder=\"$placeholder\" />
+                 <label class=\"small mb-1\" for=\"$nombre\">$label</label>
+                 <input class=\"$style\" id=\"$id\" value=\"$valor\" name=\"$nombre\" $condicion type=\"$tipo\" required $read_online placeholder=\"$placeholder\" />
               </div>
             </div>
           </div>
         ";
         return $html;
     }
-    static public function GENERAR_BUTTON_SUBMIT($label,$nombre="boton_submit",$style= "btn btn-primary btn-block")
+    static public function GENERAR_BUTTON_SUBMIT($label,$nombre="boton_submit",$class= "btn btn-primary btn-block",$style="")
     {
         $html = "";
         $html .= "
            <div class=\"form-group mt-4 mb-0\">
-            <button class=\"$style\" type=\"submit\" id=\"$nombre\" name=\"$nombre\" href=\"#\" >$label</button>
+            <button class=\"$class\" style='$style' type=\"submit\" id=\"$nombre\" name=\"$nombre\" href=\"#\" >$label</button>
            </div>
         ";
         return $html;
     }
-    static public function GENERAR_SELECT($opciones=array(),$name,$label,$style= "form-control")
+    static public function GENERAR_BUTTON_SUBMIT_ELIMINAR($label,$nombre="boton_submit",$style= "btn btn-primary btn-block")
+    {
+        $html = "";
+        $html .= "
+            
+           <div class=\"form-row\">
+                <div class=\"col-md-6\">
+                    <div class=\"form-group\">
+                         <button class=\"$style\" type=\"submit\" id=\"$nombre\" name=\"$nombre\" href=\"#\" >$label</button>
+                    </div>
+                </div>
+                <div class=\"col-md-6\">
+                    <div class=\"form-group\">
+                        <a class=\"btn btn-danger btn-block\" href=\"./index.php\" id=\"$nombre\" name=\"$nombre\" href=\"#\" >CANCELAR</a>
+                    </div>
+                </div>
+                 </div>
+        ";
+        return $html;
+    }
+    static public function GENERAR_SELECT($opciones=array(),$name,$label,$select="",$style="form-control")
     {
         $html = "";
         $html .= "
@@ -67,9 +100,12 @@ class FORM
             <div class=\"col-md-10\">
               <div class=\"form-group\">
                  <label class=\"small mb-1\" for=\"$name\">$label</label>
-                 <select name=\"$name\" id=\"$name\" class=\"$style\" >";
+                 <select name=\"$name\" id=\"$name\" class=\"$style\"   >";
+        $selected = "";
         foreach ($opciones as $key=>$value){
-            $html .= "<option value=\"".$value['id']."\" > ".$value['nombres']." </option>";
+            if($select == $value['id']) $selected = "selected";
+            $html .= "<option value=\"".$value['id']."\" $selected > ".$value['nombres']." </option>";
+            $selected = "";
         }
         $html .= "
                  </select>
@@ -99,31 +135,6 @@ class FORM
         ";
         return $html;
     }
-
-static public function GENERAR_SELECT_VF($style= "form-control")
-    {
-        $html = "";
-        $html .= "
-            <div class=\"form-row\">
-            <div class=\"col-md-10\">
-              <div class=\"form-group\">
-                 <label class=\"small mb-1\" for=\"vf\">Estado</label>
-                 <select name=\"vf\" id=\"vf\" class=\"$style\" >
-                    <option value=\"1\">CORRECTO</option>
-                    <option value=\"0\">INCORRECTO</option>
-                    ";
-        $html .= "
-                 </select>
-              </div>
-            </div>
-          </div>
-        ";
-        return $html;
-    }
-
-
-
-
 
 
     static public function OBTENER_FOOTER_HTML()

@@ -21,6 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/forms/curso" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -29,6 +30,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\curso" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\PRO4G\forms" />
       <recent name="C:\xampp\htdocs\PRO4G\core" />
@@ -62,7 +66,7 @@
       <workItem from="1585456950696" duration="2871000" />
       <workItem from="1585521603535" duration="17880000" />
       <workItem from="1585624972115" duration="1444000" />
-      <workItem from="1585626892132" duration="112000" />
+      <workItem from="1585626892132" duration="5997000" />
     </task>
     <servers />
   </component>
@@ -74,10 +78,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="506" y="229" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1585538317215" />
-    <state x="513" y="326" key="NewPhpFileDialog" timestamp="1585541074635">
+    <state x="513" y="326" key="NewPhpFileDialog" timestamp="1585630870979">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="513" y="326" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1585541074635" />
+    <state x="513" y="326" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1585630870979" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog" timestamp="1585626899347">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

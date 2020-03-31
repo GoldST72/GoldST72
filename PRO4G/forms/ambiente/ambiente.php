@@ -11,7 +11,7 @@ require '../../core/classOpciones.php';
 require '../../core/classPermisosMenu.php';
 require '../../core/classPersona.php';
 require '../../core/classPregunta.php';
-
+require '../../core/classDATATABLE.php';
 require '../../core/classRol.php';
 require '../../core/ambiente.php';
 require '../../core/BDD.php';
