@@ -9,9 +9,9 @@ print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
 print FORM::FORMULARIO_USUARIO("POST","Registrar Curso","return validar_usuario();");
 //ASI SE GENERAN INPUTS
-print FORM::GENERAR_INPUT_USUARIO("Curso","","Ingrese el curso","text","form-control py-4");
-print FORM::GENERAR_INPUT_USUARIO("Descripcion","","Ingrese la descripcion","text","form-control py-4");
-print FORM::GENERAR_INPUT_USUARIO("Paralelo","","Ingrese el paralelo","text","form-control py-4");
+print FORM::GENERAR_INPUT_USUARIO("Curso","","Ingrese el curso","text","Curso");
+print FORM::GENERAR_INPUT_USUARIO("Descripcion","","Ingrese la descripcion","text","Descripcion");
+print FORM::GENERAR_INPUT_USUARIO("Paralelo","","Ingrese el paralelo","text","Paralelo");
 
 
 
