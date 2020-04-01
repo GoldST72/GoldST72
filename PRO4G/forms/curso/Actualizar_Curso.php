@@ -4,10 +4,10 @@ require '../ambiente/ambiente.php';
 
 $id = $_GET['id'];
 
-$datos = BDD::CONSULTAR("q_", "id_alumno,estado,persona_id,curso_id", "id_alumno=$id and estado = 'ACTIVO'");
+$datos = BDD::CONSULTAR("q_curso", "id_curso,curso,descripcion,paralelo,estado", "id_curso=$id and estado = 'ACTIVO'" );
 print Ambiente::ENCABEZADO();
 if ($datos) {
-    if (isset($_POST['boton_submit']))  classAlumno::UPDATE_ALUMNO();
+    if (isset($_POST['boton_submit']))  classCursoExamen::UPDATE_CURSO_EXAMEN();
 
 
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
@@ -17,12 +17,14 @@ if ($datos) {
 
     print FORM::FORMULARIO_USUARIO("POST", "Actualizar Usuario", "return validar_usuario();", "#");
 //ASI SE GENERAN INPUTS
-    print FORM::GENERAR_INPUT_USUARIO("id","$id","","hidden","");
 
-    $array = BDD::QUERY("select id_persona as id,concat(nombres,' ',apellidos) as nombres from q_persona");
-    print FORM::GENERAR_SELECT($array,"Persona","Persona");
-    $arraym = BDD::QUERY("select id_curso as id,concat(curso,' ',paralelo) as nombres from q_curso");
-    print FORM::GENERAR_SELECT($arraym,"Curso","Curso");
+    print FORM::GENERAR_INPUT_USUARIO("id",$datos['id_curso'],"","hidden","");
+    print FORM::GENERAR_INPUT_USUARIO("Curso",$datos['curso'],"Ingrese su cedula","text","Cedula");
+    print FORM::GENERAR_INPUT_USUARIO("Descripcion",$datos['descripcion'],"Ingrese su nombre","text","Nombre");
+
+    print FORM::GENERAR_INPUT_USUARIO("Paralelo",$datos['paralelo'],"Ingrese su apellido","text","Apellido");
+
+
 //ASI SE GENERAN SELECT
 //ASI SE GENERAN BUTTONS
     print FORM::GENERAR_BUTTON_SUBMIT_ELIMINAR("Actualizar Usuario");
