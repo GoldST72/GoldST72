@@ -33,7 +33,7 @@ class classAlumno
         if(true){
             BDD::ELIMINAR_DATOS("q_alumno","id_alumno = $name_id" );
         }else{
-    print "<script>alert('Actualizado sin problemas');</script>";
+    print "<script>alert('Eliminado sin problemas');</script>";
 }
 }
 
