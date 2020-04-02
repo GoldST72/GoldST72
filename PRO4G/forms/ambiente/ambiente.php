@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION['usuario']){
+if(!$_SESSION['usuario']){
     header('location: ../login/form_login.php');
 }else{
     require '../../core/classUsuario.php';

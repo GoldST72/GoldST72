@@ -18,7 +18,7 @@ class Login
                 session_start();
                 $_SESSION['usuario'] = $name_user;
                 $_SESSION['id_usuario'] = $consulta['id_usuario'];
-               return print "<script>window.location='../mod_menu/menu_desktop.php'</script>";
+                return print "<script>window.location='../mod_menu/menu_desktop.php'</script>";
             }
             else
             {

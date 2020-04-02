@@ -1,5 +1,5 @@
 <?php
-require '../ambiente/ambiente_login.php.php';
+require '../ambiente/ambiente_login.php';
 session_start();
 $_SESSION = array();
 session_destroy();
