@@ -1,8 +1,7 @@
 <?php
-session_start();
-if($_SESSION['usuario']){
-    header('location: ../login/form_login.php');
-}else{
+
+
+
     require '../../core/classUsuario.php';
     require '../../core/classLogin.php';
     require '../../core/classMenu.php';
@@ -19,7 +18,7 @@ if($_SESSION['usuario']){
     require '../../core/ambiente.php';
     require '../../core/BDD.php';
     require '../../core/FORM.php';
-}
+
 
 
 ?>

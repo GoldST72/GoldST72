@@ -1,5 +1,8 @@
 <?php
-require '../ambiente/ambiente.php';
+require '../ambiente/ambiente_login.php.php';
+session_start();
+$_SESSION = array();
+session_destroy();
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY("bg-primary");
 if (isset($_POST['inputLogin'])) Login::VALIDAR_USUARIO();

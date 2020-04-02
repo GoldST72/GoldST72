@@ -21,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/forms/usuario" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/forms/ambiente" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,11 +38,11 @@
       <recent name="C:\xampp\htdocs\PRO4G\forms\login" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\RETO\trunk\PRO4G\forms\ambiente" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\usuario" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\roles" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\pregunta" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\persona" />
-      <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\permisos" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -73,7 +73,7 @@
       <workItem from="1585626892132" duration="5997000" />
       <workItem from="1585666739952" duration="1487000" />
       <workItem from="1585682080818" duration="11039000" />
-      <workItem from="1585851562363" duration="12764000" />
+      <workItem from="1585851562363" duration="13444000" />
     </task>
     <servers />
   </component>
