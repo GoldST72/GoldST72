@@ -1,8 +1,5 @@
 <?php
-require('../template/ambiente.php');
-require('../core/FORM.php');
-require('../core/BDD.php');
-require ('../core/classExamen.php.');
+require '../ambiente/ambiente.php';
 if(isset($_POST['boton_submit']))  classExamen::INSERTAR_EXAMEN();
 
 
@@ -11,10 +8,8 @@ print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
 print FORM::FORMULARIO_USUARIO("POST","Registrar Datos","return validar_usuario();");
 //ASI SE GENERAN INPUTS
-print FORM::GENERAR_INPUT_USUARIO("Nombre","","Ingrese nombre de examen","text","form-control py-4");
+print FORM::GENERAR_INPUT_USUARIO("Nombre","","Ingrese nombre de examen","text","Nombre");
 
-
-//ASI SE GENERAN SELECT
 $array = BDD::QUERY("select id_materia as id,descripcion as nombres from q_materia");
 print FORM::GENERAR_SELECT($array,"Materia","Materia");
 

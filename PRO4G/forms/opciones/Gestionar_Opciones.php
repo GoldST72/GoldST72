@@ -7,13 +7,12 @@ print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
 print FORM::FORMULARIO_USUARIO("POST","Registrar Datos","return validar_usuario();");
 //ASI SE GENERAN INPUTS
-print FORM::GENERAR_INPUT_USUARIO("Opcion","","Ingrese la opcion","text","form-control py-4");
+print FORM::GENERAR_INPUT_USUARIO("id","$id","","hidden","");
 
-print FORM::GENERAR_SELECT_VF();
-
-
-
-
+print FORM::GENERAR_INPUT_USUARIO("Descripcion","","Ingrese su descripcion","text","Descripcion");
+$array[] = array("id"=>1,"nombres"=>"Verdadero");
+$array[] = array("id"=>2,"nombres"=>"Falso");
+print FORM::GENERAR_SELECT($array,"Respuesta","Respuesta");
 //ASI SE GENERAN SELECT
 
 

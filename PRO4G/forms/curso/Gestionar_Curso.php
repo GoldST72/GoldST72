@@ -9,19 +9,10 @@ print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
 print FORM::FORMULARIO_USUARIO("POST","Registrar Curso","return validar_usuario();");
 //ASI SE GENERAN INPUTS
-print FORM::GENERAR_INPUT_USUARIO("Curso","","Ingrese el curso","text","Curso");
-print FORM::GENERAR_INPUT_USUARIO("Descripcion","","Ingrese la descripcion","text","Descripcion");
-print FORM::GENERAR_INPUT_USUARIO("Paralelo","","Ingrese el paralelo","text","Paralelo");
+print FORM::GENERAR_INPUT_USUARIO("curso","","Ingrese el curso","text","Curso");
+print FORM::GENERAR_INPUT_USUARIO("descripcion","","Ingrese la descripcion","text","Descripcion");
+print FORM::GENERAR_INPUT_USUARIO("paralelo","","Ingrese el paralelo","text","Paralelo");
 
-
-
-
-
-
-//ASI SE GENERAN SELECT
-
-
-//ASI SE GENERAN BUTTONS
 print FORM::GENERAR_BUTTON_SUBMIT("Registrar Datos");
 
 //ESTAS ETIQUETAS CIERRAN EL FORMULARIO  (OBLIGATORIAS)

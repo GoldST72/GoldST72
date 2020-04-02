@@ -10,6 +10,7 @@ class classExamen
         $array = array("nombre"=>$name_nombre,"materia"=>$select,"estado"=>"ACTIVO");
        
         $id = BDD::INSERTAR_DESDE_ARRAY("q_examen",$array);
+        classCursoExamen::REDIRECCIONAR();
         //print "<script>alert('Deben coincidir la clave con su confirmacion clave');</script>";
 
     }
@@ -25,23 +26,17 @@ class classExamen
           BDD::ACTUALIZAR_DESDE_ARRAY("q_examen",$array,"id_examen = $name_id" );
         
             print "<script>alert('Actualizado sin problemas');</script>";
-        
-    }
+     classCursoExamen::REDIRECCIONAR();
+
+
+ }
     static public function ELIMINAR_EXAMEN(){
       $name_id = filter_input(INPUT_POST,"id");
 
-        $name_nombre = filter_input(INPUT_POST,"Nombre");
-        $select = filter_input(INPUT_POST,"Materia");
-        $array = array("nombre"=>$name_nombre,"materia"=>$select,"estado"=>"ACTIVO");
-        
+        $array = array("estado"=>"INACTIVO");
 
-          BDD::ELIMINAR_DATOS("q_examen",$array,"id_examen = $name_id" );
+          BDD::ACTUALIZAR_DESDE_ARRAY("q_examen",$array,"id_examen = $name_id" );
+        classCursoExamen::REDIRECCIONAR();
 
-
-
-
-
-
-
-}
+    }
 }

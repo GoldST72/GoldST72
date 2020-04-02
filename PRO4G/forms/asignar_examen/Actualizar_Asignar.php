@@ -4,7 +4,7 @@ require '../ambiente/ambiente.php';
 
 $id = $_GET['id'];
 
-$datos = BDD::CONSULTAR("q_curso_examenes", "id_curso_e,examen_id,curso_id", "id_curso_e=$id");
+$datos = BDD::CONSULTAR("q_curso_examenes", "id,examen_id,curso_id", "id=$id");
 print Ambiente::ENCABEZADO();
 if ($datos) {
     if (isset($_POST['boton_submit']))  classCursoExamen::UPDATE_CURSO_EXAMEN();
@@ -15,7 +15,7 @@ if ($datos) {
     print Ambiente::ABRIR_BODY('bg-primary');
 
 
-    print FORM::FORMULARIO_USUARIO("POST", "Actualizar Usuario", "return validar_usuario();", "#");
+    print FORM::FORMULARIO_USUARIO("POST", "Actualizar Asignacion");
 //ASI SE GENERAN INPUTS
     print FORM::GENERAR_INPUT_USUARIO("id","$id","","hidden","");
 
@@ -27,7 +27,7 @@ if ($datos) {
 
 //ASI SE GENERAN SELECT
 //ASI SE GENERAN BUTTONS
-    print FORM::GENERAR_BUTTON_SUBMIT_ELIMINAR("Actualizar Usuario");
+    print FORM::GENERAR_BUTTON_SUBMIT_ELIMINAR("Actualizar Asignacion");
 
 
 //ESTAS ETIQUETAS CIERRAN EL FORMULARIO  (OBLIGATORIAS)

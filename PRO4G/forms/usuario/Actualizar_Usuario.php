@@ -4,10 +4,10 @@ require '../ambiente/ambiente.php';
 
 $id = $_GET['id'];
 
-$datos = BDD::CONSULTAR("q_curso_examenes", "id_curso_e,examen_id,curso_id", "id_curso_e=$id");
+$datos = BDD::CONSULTAR("q_usuario", "usuario,correo,clave,id_persona,rol_usuario", "id_usuario=$id");
 print Ambiente::ENCABEZADO();
 if ($datos) {
-    if (isset($_POST['boton_submit']))  classCursoExamen::UPDATE_CURSO_EXAMEN();
+    if (isset($_POST['boton_submit']))  classUsuario::ACTUALIZAR_USUARIO();
 
 
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
@@ -15,15 +15,21 @@ if ($datos) {
     print Ambiente::ABRIR_BODY('bg-primary');
 
 
-    print FORM::FORMULARIO_USUARIO("POST", "Actualizar Usuario", "return validar_usuario();", "#");
+    print FORM::FORMULARIO_USUARIO("POST", "Actualizar Usuario");
+    print FORM::GENERAR_INPUT_USUARIO("id",$id,"","hidden","");
+
 //ASI SE GENERAN INPUTS
-    print FORM::GENERAR_INPUT_USUARIO("id","$id","","hidden","");
+    print FORM::GENERAR_INPUT_USUARIO("Usuario",$datos['usuario'],"Ingrese su usuario","text","Usuario");
+    print FORM::GENERAR_INPUT_USUARIO("Correo",$datos['correo'],"Ingrese su correo electronico","text","Correo");
+    print FORM::GENERAR_INPUT_USUARIO("Clave",$datos['clave'],"Ingrese su contraseña","password","Clave");
 
-    $arrayp = BDD::QUERY("select id_examen as id ,nombre as nombres from q_examen");
-    print FORM::GENERAR_SELECT($arrayp,"Examen","Examen",$datos['examen_id']);
 
-    $arraym = BDD::QUERY("select id_curso as id,concat(curso,' ',paralelo) as nombres from q_curso");
-    print FORM::GENERAR_SELECT($arraym,"Curso","Menu",$datos['curso_id']);
+    $array = BDD::QUERY("select id_persona as id,concat(nombres,' ',apellidos) as nombres from q_persona");
+    print FORM::GENERAR_SELECT($array,"persona","Persona",$datos['id_persona']);
+    $arrayp = BDD::QUERY("select id_rol as id ,rol_nombre as nombres from q_rol");
+    print FORM::GENERAR_SELECT($arrayp,"roles","Roles",$datos['rol_usuario']);
+//ASI SE GENERAN SELECT
+
 
 //ASI SE GENERAN SELECT
 //ASI SE GENERAN BUTTONS

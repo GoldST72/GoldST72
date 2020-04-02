@@ -4,10 +4,10 @@ require '../ambiente/ambiente.php';
 
 $id = $_GET['id'];
 
-$datos = BDD::CONSULTAR("q_alumno", "id_alumno,estado,persona_id,curso_id", "id_alumno=$id and estado = 'ACTIVO'");
+$datos = BDD::CONSULTAR("q_examen", "id_examen,nombre,materia", "id_examen=$id and estado = 'ACTIVO'");
 print Ambiente::ENCABEZADO();
 if ($datos) {
-    if (isset($_POST['boton_submit']))  classAlumno::UPDATE_ALUMNO();
+    if (isset($_POST['boton_submit']))  classExamen::UPDATE_EXAMEN();
 
 
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
@@ -15,17 +15,18 @@ if ($datos) {
     print Ambiente::ABRIR_BODY('bg-primary');
 
 
-    print FORM::FORMULARIO_USUARIO("POST", "Actualizar Usuario", "return validar_usuario();", "#");
+    print FORM::FORMULARIO_USUARIO("POST", "Actualizar Examen");
 //ASI SE GENERAN INPUTS
     print FORM::GENERAR_INPUT_USUARIO("id","$id","","hidden","");
+    print FORM::GENERAR_INPUT_USUARIO("Nombre",$datos['nombre'],"","text","Nombre");
 
-    $array = BDD::QUERY("select id_persona as id,concat(nombres,' ',apellidos) as nombres from q_persona");
-    print FORM::GENERAR_SELECT($array,"Persona","Persona",$datos['persona_id']);
-    $arraym = BDD::QUERY("select id_curso as id,concat(curso,' ',paralelo) as nombres from q_curso");
-    print FORM::GENERAR_SELECT($arraym,"Curso","Curso",$datos['curso_id']);
+    $array = BDD::QUERY("select id_materia as id,descripcion as nombres from q_materia");
+    print FORM::GENERAR_SELECT($array,"Materia","Materia",$datos['materia']);
+
+
 //ASI SE GENERAN SELECT
 //ASI SE GENERAN BUTTONS
-    print FORM::GENERAR_BUTTON_SUBMIT_ELIMINAR("Actualizar Usuario");
+    print FORM::GENERAR_BUTTON_SUBMIT_ELIMINAR("Actualizar Examen");
 
 
 //ESTAS ETIQUETAS CIERRAN EL FORMULARIO  (OBLIGATORIAS)

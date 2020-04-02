@@ -30,19 +30,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\RETO\trunk\PRO4G\core" />
+      <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\asignar_examen" />
+      <recent name="C:\xampp\htdocs\PRO4G\forms" />
+      <recent name="C:\xampp\htdocs\PRO4G\core" />
+      <recent name="C:\xampp\htdocs\PRO4G\forms\login" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\usuario" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\roles" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\pregunta" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\persona" />
       <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\permisos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\GIT\trunk\PRO4G\forms\asignar_examen" />
-      <recent name="C:\xampp\htdocs\PRO4G\forms" />
-      <recent name="C:\xampp\htdocs\PRO4G\core" />
-      <recent name="C:\xampp\htdocs\PRO4G\forms\login" />
-      <recent name="C:\xampp\htdocs\PRO4G\forms\persona" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -69,10 +69,11 @@
       <updated>1585456946430</updated>
       <workItem from="1585456950696" duration="2871000" />
       <workItem from="1585521603535" duration="17880000" />
-      <workItem from="1585624972115" duration="1444000" />
+      <workItem from="1585624972115" duration="1814000" />
       <workItem from="1585626892132" duration="5997000" />
       <workItem from="1585666739952" duration="1487000" />
       <workItem from="1585682080818" duration="11039000" />
+      <workItem from="1585851562363" duration="12764000" />
     </task>
     <servers />
   </component>
@@ -80,6 +81,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2370" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585858642874">
+      <screen x="1920" y="0" width="1440" height="860" />
+    </state>
+    <state x="2370" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/1920.0.1440.860@1920.0.1440.860" timestamp="1585858642874" />
     <state x="506" y="229" key="NewPhpClassDialog" timestamp="1585666970893">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -97,15 +102,5 @@
     </state>
     <state x="314" y="159" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1585625089904" />
     <state x="335" y="180" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585528569026" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/core/classUsuario.php</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

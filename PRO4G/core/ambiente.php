@@ -40,7 +40,7 @@ class Ambiente
     {
         $html = "";
         $html .= "
-            <script src=\"https://code.jquery.com/jquery-3.4.1.min.js\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://code.jquery.com/jquery-3.4.1.min.js\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js\" crossorigin=\"anonymous\"></script>
         <script src=\"../../startbootstrap-sb-admin-gh-pages/dist/js/scripts.js\"></script>
         ";
@@ -112,10 +112,11 @@ class Ambiente
     static public function NAV_BAR()
     {
         $html = "";
+
         $html .= "
     <div id=\"layoutSidenav_nav\">
-         <nav class=\"sb-topnav navbar navbar-expand navbar-dark bg-dark\">
-                 <a class=\"navbar-brand\" href=\"index.html\">Gimnasia Deportiva </a>
+         <nav class=\"sb-topnav navbar navbar-expand navbar-light bg-light\">
+                 <a class=\"navbar-brand\" onclick=\"src_iframe('../../template/usuario/');\"> Sistema Academico </a>
                     <button class=\"btn btn-link btn-sm order-1 order-lg-0\" id=\"sidebarToggle\" href=\"#\">
                         <i class=\"fas fa-bars\"></i>
                     </button><!-- Navbar Search-->
@@ -129,9 +130,9 @@ class Ambiente
                         <i class=\"fas fa-user fa-fw\"></i>
                     </a>
                     <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"userDropdown\">
-                        <a class=\"dropdown-item\" href=\"#\">Configuraciones</a>
+                        <a class=\"dropdown-item\" onclick=\"src_iframe('../usuario/Actualizar_usuario.php?id=".$_SESSION['id_usuario']."')\">Configuraciones</a>
                         <div class=\"dropdown-divider\"></div>
-                        <a class=\"dropdown-item\" href=\"../login/login.php\">Cerrar Session</a>
+                        <a class=\"dropdown-item\" href=\"../login/form_login.php\">Cerrar Session</a>
                     </div>
                 </li>
             </ul>
@@ -142,7 +143,14 @@ class Ambiente
     static public function ABRIR_BODY($style = "sb-nav-fixed")
     {
         $html = "";
-        if ($style != "") $style = "class=\"$style\"";
+
+        if ($style != "") {
+            if($style=="bg-primary")
+                $style = "class=\"bg-secondary\"";
+            else
+                $style = "class=\"$style\"";
+        }
+
         $html .= "<body $style>";
         return $html;
     }

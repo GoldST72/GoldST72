@@ -6,7 +6,7 @@ if(isset($_POST['boton_submit']))  classCursoExamen::INSERTAR_CURSO_EXAMEN();
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
-print FORM::FORMULARIO_USUARIO("POST","Designar Examen","return validar_usuario();");
+print FORM::FORMULARIO_USUARIO("POST","Designar Examen");
 //ASI SE GENERAN INPUTS
 $arrayp = BDD::QUERY("select id_examen as id ,nombre as nombres from q_examen");
 print FORM::GENERAR_SELECT($arrayp,"Examen","Examen");

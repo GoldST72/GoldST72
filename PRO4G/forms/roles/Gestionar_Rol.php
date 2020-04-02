@@ -6,9 +6,9 @@ if(isset($_POST['boton_submit']))  classRol::INSERTAR_ROL();
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
-print FORM::FORMULARIO_USUARIO("POST","Registrar Datos","return validar_usuario();");
+print FORM::FORMULARIO_USUARIO("POST","Registrar Datos");
 //ASI SE GENERAN INPUTS
-print FORM::GENERAR_INPUT_USUARIO("Rol","","Ingrese su nombre del rol","text","form-control py-4");
+print FORM::GENERAR_INPUT_USUARIO("Rol","","Ingrese su nombre del rol","text","ROL");
 
 //ASI SE GENERAN SELECT
 //$array[] = BDD::QUERY("select q_persona.id_persona,concat(q_persona.nombre,' ',q_persona.apellido) as nombres from q_usuario 

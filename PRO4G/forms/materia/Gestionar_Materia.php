@@ -7,15 +7,10 @@ if(isset($_POST['boton_submit']))  classMateria::INSERTAR_MATERIA();
 //Y ESTAS LAS ABREN (OBLIGATORIAS)
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
-print FORM::FORMULARIO_USUARIO("POST","Materias","return validar_usuario();");
+print FORM::FORMULARIO_USUARIO("POST","Materias");
 //ASI SE GENERAN INPUTS
-print FORM::GENERAR_INPUT_USUARIO("Materia","","Ingrese la materia","text","form-control py-4");
+print FORM::GENERAR_INPUT_USUARIO("descripcion","","Ingrese la descripcion","text","Descripcion");
 
-
-//ASI SE GENERAN SELECT
-//$array[] = BDD::QUERY("select q_materia.id_materia as id,q_materia.estado as nombre from q_materia");
-//print FORM::GENERAR_SELECT($array,"select","Materia");
-//ASI SE GENERAN BUTTONS
 print FORM::GENERAR_BUTTON_SUBMIT("Registrar Datos");
 
 //ESTAS ETIQUETAS CIERRAN EL FORMULARIO  (OBLIGATORIAS)

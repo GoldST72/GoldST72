@@ -3,7 +3,7 @@
 class BDD
 {
     private static $SERVIDOR = "localhost";
-    private static $NAME_BASE = "virtual_quiz";
+    private static $NAME_BASE = "mateo";
     private static $NAME_USER = "root";
     private static $PASS = "password";
     public $conexion;

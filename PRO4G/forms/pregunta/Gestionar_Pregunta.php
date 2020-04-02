@@ -13,7 +13,7 @@ print FORM::GENERAR_INPUT_USUARIO("Pregunta","","Ingrese su pregunta","text","fo
 //ASI SE GENERAN SELECT
 $arrayx = BDD::QUERY("select id_examen as id,nombre as nombres from q_examen");
 print FORM::GENERAR_SELECT($arrayx,"Examen","Examen");
-print FORM::GENERAR_INPUT_USUARIO("Anexo","","Ingrese su Anexo","text","form-control py-4");
+print FORM::GENERAR_INPUT_USUARIO("Anexo","","Ingrese su Anexo","text","Anexo","","");
 $arrayu = BDD::QUERY("select id_opcion as id,descripcion as nombres from q_opciones");
 print FORM::GENERAR_SELECT($arrayu,"Opcion","Opciones disponibles");
 

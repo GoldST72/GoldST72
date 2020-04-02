@@ -8,7 +8,6 @@ require '../../core/classCursoExamen.php';
 require '../../core/classExamen.php';
 require '../../core/classMateria.php';
 require '../../core/classOpciones.php';
-require '../../core/classPermisosMenu.php';
 require '../../core/classPersona.php';
 require '../../core/classPregunta.php';
 require '../../core/classDATATABLE.php';

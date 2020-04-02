@@ -1,6 +1,6 @@
 <?php
 require '../ambiente/ambiente.php';
-
+session_start();
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY();
 print Ambiente::NAV_BAR();

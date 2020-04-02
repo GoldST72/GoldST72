@@ -4,9 +4,8 @@
 require '../ambiente/ambiente.php';
 print Ambiente::ENCABEZADO();
 print Ambiente::ABRIR_BODY('bg-primary');
-$array_encabezado = array("Estado","Persona","Curso");
-$array_detalle = BDD::QUERY("select a.estado,concat(p.nombres,' ',p.apellidos) as nombre,c.curso,a.id_alumno from q_alumno as a 
-inner join q_persona as p on p.id_persona = a.persona_id
-inner join q_curso as c on c.id_curso = a.curso_id");
-print DATATABLE::CONSULTA_INDEX($array_encabezado,$array_detalle,"Alumno","Alumno");
+$array_encabezado = array("Nombre","Materia");
+$array_detalle = BDD::QUERY("select nombre, q_materia.descripcion,id_examen from q_examen inner join q_materia on q_materia.id_materia = q_examen.materia
+where q_examen.estado = 'ACTIVO'");
+print DATATABLE::CONSULTA_INDEX($array_encabezado,$array_detalle,"Examen","Examen");
 print DATATABLE::SCRIPTS_JS();
